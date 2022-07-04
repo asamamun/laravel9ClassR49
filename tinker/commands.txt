@@ -1,0 +1,75 @@
+Microsoft Windows [Version 10.0.19041.1415]
+(c) Microsoft Corporation. All rights reserved.
+
+F:\xampp\htdocs\r49\laravel\laravel9ClassR49>php artisan tinker
+Psy Shell v0.11.5 (PHP 8.1.2 — cli) by Justin Hileman
+>>> $a=5;
+=> 5
+
+>>> $b=10;
+=> 10
+
+>>> $a+$b;
+=> 15
+
+>>> list($p,$q) = [$a,$b];
+=> [
+     5,
+     10,
+   ]
+
+>>> $p;
+=> 5
+
+>>> $d = new Department;
+[!] Aliasing 'Department' to 'App\Models\Department' for this Tinker session.
+=> App\Models\Department {#4509}
+
+>>> $d->find(1);
+=> App\Models\Department {#4506
+     id: 1,
+     name: "A",
+     description: "sdfsadf",
+     phone: "2343244",
+     created_at: "2022-07-04 15:39:58",
+     updated_at: null,
+   }
+
+>>> $d;
+=> App\Models\Department {#4509}
+
+>>> $dept = $d->find(2);
+=> App\Models\Department {#4508
+     id: 2,
+     name: "B",
+     description: "sdfsadf",
+     phone: "2343244",
+     created_at: "2022-07-04 15:39:58",
+     updated_at: null,
+   }
+
+>>> $dept->name="IT";
+=> "IT"
+
+>>> $dept->save();
+=> true
+
+>>> $dept;
+=> App\Models\Department {#4508
+     id: 2,
+     name: "IT",
+     description: "sdfsadf",
+     phone: "2343244",
+     created_at: "2022-07-04 15:39:58",
+     updated_at: "2022-07-04 10:45:14",
+   }
+
+>>> for($i=1;$i<11;$i++){$nd = new Department;$r = rand(100,500); $nd->name = $r; $nd->description=$r;$nd->phone=$r;$nd->save();}
+>>> for($i=1;$i<11;$i++){$nd = new Department;$r = rand(100,500); $nd->name = $r; $nd->description=$r;$nd->phone=$r;$nd-
+>save();}
+>>> for($i=1;$i<11;$i++){$nd = new Department;$r = rand(100,500); $nd->name = $r; $nd->description=$r;$nd->phone=$r;$nd-
+>save();}
+>>> for($i=1;$i<1000;$i++){$nd = new Department;$r = rand(100,500); $nd->name = $r; $nd->description=$r;$nd->phone=$r;$n
+d->save();}
+>>> exit
+Exit:  Goodbye
